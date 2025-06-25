@@ -1,11 +1,13 @@
-FROM openjdk:17-jdk-alpine
+FROM openjdk:17-alpine
+
 WORKDIR /app
 
-# Baixa Lavalink e configura
 RUN apk add --no-cache curl
-RUN curl -L -o Lavalink.jar https://github.com/freyacodes/Lavalink/releases/latest/download/Lavalink.jar
 
-# Adiciona o arquivo de configuração
+RUN curl -Lo Lavalink.jar https://github.com/freyacodes/Lavalink/releases/latest/download/Lavalink.jar
+
 COPY application.yml .
+
+EXPOSE 2333
 
 CMD ["java", "-jar", "Lavalink.jar"]
