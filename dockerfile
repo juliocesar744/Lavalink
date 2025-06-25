@@ -8,6 +8,6 @@ RUN curl -Lo Lavalink.jar https://github.com/freyacodes/Lavalink/releases/latest
 
 COPY application.yml .
 
-EXPOSE 2333
+EXPOSE 80
 
 CMD ["java", "-jar", "Lavalink.jar"]
