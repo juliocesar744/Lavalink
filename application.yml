@@ -1,14 +1,15 @@
 server:
-  port: 2333
+  port: 8080
 
 lavalink:
   server:
-    password: "youshallnotpass"
+    password: "senhaforte"
     sources:
       youtube: true
       bandcamp: true
       soundcloud: true
       twitch: true
       vimeo: true
+      mixer: true
       http: true
       local: false
